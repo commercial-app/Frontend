@@ -33,11 +33,15 @@ export default function RegisterForm() {
       } else {
         setError(res.data.message || "Registration failed");
       }
-    } catch (err: any) {
-      setError(
-        err.response?.data?.message ||
-          "An unexpected error occurred during Registration"
-      );
+    } catch (err) {
+      if (axios.isAxiosError(err)) {
+        setError(
+          err.response?.data?.message ||
+            "An unexpected error occurred during registration"
+        );
+      } else {
+        setError("An unexpected error occurred during registration");
+      }
     }
   };
 

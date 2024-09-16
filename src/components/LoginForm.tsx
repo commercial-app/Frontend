@@ -34,11 +34,15 @@ export default function LoginForm() {
       } else {
         setError(res.data.message || "LoginIn failed");
       }
-    } catch (err: any) {
-      setError(
-        err.response?.data?.message ||
-          "An unexpected error occurred during Login"
-      );
+    } catch (err) {
+      if (axios.isAxiosError(err)) {
+        setError(
+          err.response?.data?.message ||
+            "An unexpected error occurred during login"
+        );
+      } else {
+        setError("An unexpected error occurred during login");
+      }
     }
   };
 
