@@ -1,5 +1,4 @@
 import Link from "next/link";
-import NavbarLogIn from "../NavbarLogIn";
 
 export default function Navbar() {
   return (
@@ -12,9 +11,6 @@ export default function Navbar() {
         <Link href="/game" className="hover:bg-neutral-300 rounded-lg p-1">
           Game
         </Link>
-      </div>
-      <div>
-        <NavbarLogIn />
       </div>
     </nav>
   );

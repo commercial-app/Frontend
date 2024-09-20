@@ -5,6 +5,7 @@ interface UserProps {
   name: string;
   email: string;
   token: string | null;
+  point: number;
   setName: (name: string) => void;
   setEmail: (email: string) => void;
   setToken: (token: string | null) => void;
@@ -17,9 +18,11 @@ export const useAuthStore = create<UserProps>()(
     (set) => ({
       name: "",
       email: "",
+      point: 0,
       token: null,
       setName: (name: string) => set({ name }),
       setEmail: (email: string) => set({ email }),
+      setPoint: (point: number) => set({ point }),
       setToken: (token: string | null) => set({ token }),
       clearToken: () => set({ token: null }),
       resetUser: () => set({ name: "", email: "" }), // 상태를 초기화합니다.
