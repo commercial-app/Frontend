@@ -15,8 +15,10 @@ export default function LoginNav() {
     <div className="flex items-center gap-4">
       {token ? (
         <>
-          <span className="text-lg text-gray-700">{name}</span>
-          <span className="text-lg text-gray-600">{point} points</span>
+          <div className="bg-white rounded-lg px-[5px]">
+            <span className="text-lg ">{name}님 </span>
+            <span className="text-lg  ">{point} points</span>
+          </div>
           <button
             onClick={handleLogout}
             className="bg-red-500 text-white hover:bg-red-600 transition duration-300 p-2 rounded-lg"

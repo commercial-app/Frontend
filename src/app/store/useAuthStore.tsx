@@ -8,6 +8,7 @@ interface UserProps {
   point: number;
   setName: (name: string) => void;
   setEmail: (email: string) => void;
+  setPoint: (point: number) => void;
   setToken: (token: string | null) => void;
   clearToken: () => void;
   resetUser: () => void; // 매개변수 없이 상태를 초기화합니다.

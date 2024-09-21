@@ -11,7 +11,7 @@ export default function LoginForm() {
   const [error, setError] = useState("");
   const router = useRouter();
 
-  const setToken = useAuthStore((state) => state.setToken);
+  const { setName, setPoint, setToken } = useAuthStore();
 
   const login = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();

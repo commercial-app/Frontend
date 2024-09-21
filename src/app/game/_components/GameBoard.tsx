@@ -46,7 +46,7 @@ export default function GameBoard() {
   };
 
   return (
-    <main className="border rounded-lg shadow-lg lg:w-[1400px] flex flex-col my-[20px] bg-white">
+    <main className="border rounded-lg shadow-lg lg:w-[1400px] flex flex-col my-[20px]">
       <div className="flex">
         <div className="bg-red-600 w-[95px] lg:w-[180px] h-[80px] lg:h-[150px] flex flex-col justify-center items-center rounded-l-lg">
           <Image

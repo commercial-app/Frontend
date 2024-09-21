@@ -15,7 +15,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="">
+      <body className="relative min-h-screen bg-[url('/galaxy.webp')] bg-cover bg-center">
         <Navbar />
         {children}
       </body>

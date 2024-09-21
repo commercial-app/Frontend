@@ -3,7 +3,7 @@ import LoginNav from "../LoginNav";
 
 export default function Navbar() {
   return (
-    <nav className="w-full h-[60px] bg-neutral-200 bg-opacity-70 shadow-md flex justify-between items-center px-4">
+    <nav className="bg-white w-full h-[60px] bg-opacity-30 shadow-md flex justify-between items-center px-4">
       <Link
         href="/"
         className="text-[24px] font-bold text-red-600 hover:bg-red-500 hover:text-white transition-colors duration-300 p-2 rounded-lg"
