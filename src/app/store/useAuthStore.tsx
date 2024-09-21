@@ -25,7 +25,7 @@ export const useAuthStore = create<UserProps>()(
       setPoint: (point: number) => set({ point }),
       setToken: (token: string | null) => set({ token }),
       clearToken: () => set({ token: null }),
-      resetUser: () => set({ name: "", email: "" }), // 상태를 초기화합니다.
+      resetUser: () => set({ name: "", email: "", point: 0 }), // 상태를 초기화합니다.
     }),
     {
       name: "auth-store", // Local storage key

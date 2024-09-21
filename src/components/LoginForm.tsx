@@ -12,43 +12,51 @@ export default function LoginForm() {
   const router = useRouter();
 
   const setToken = useAuthStore((state) => state.setToken);
-  const setNameStore = useAuthStore((state) => state.setName);
-  const setEmailStore = useAuthStore((state) => state.setEmail);
 
-  const Login = async (e: React.FormEvent<HTMLFormElement>) => {
+  const login = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setError("");
+    setError(""); // 오류 상태 초기화
 
     const userData = { email, password };
 
     try {
-      const res = await axios.post("/api/login", userData);
+      const res = await axios.post(
+        "http://43.203.212.158:8080/api/login",
+        userData,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
+
       if (res.status === 200) {
-        const { user, token } = res.data;
+        const { token } = res.data;
 
         setToken(token);
-        setNameStore(user.name);
-        setEmailStore(user.email);
-        sessionStorage.setItem("token", token);
-        router.replace("/");
+
+        // sessionStorage에 토큰 저장
+        try {
+          sessionStorage.setItem("token", token);
+        } catch (storageError) {
+          console.error("Failed to save token to sessionStorage", storageError);
+          setError("Failed to save session. Please try again.");
+          return;
+        }
+
+        router.replace("/"); // 로그인 성공 후 홈으로 리다이렉션
       } else {
-        setError(res.data.message || "LoginIn failed");
+        setError(res.data.message || "Login failed");
       }
-    } catch (err) {
-      if (axios.isAxiosError(err)) {
-        setError(
-          err.response?.data?.message ||
-            "An unexpected error occurred during login"
-        );
-      } else {
-        setError("An unexpected error occurred during login");
-      }
+    } catch (err: any) {
+      console.error("Login error:", err);
+      setError(err.response?.data?.message || "An error occurred during login");
     }
   };
 
   return (
     <form
-      onSubmit={Login}
+      onSubmit={login}
       className="w-full flex flex-col items-center gap-[20px]"
     >
       <div>
@@ -70,7 +78,9 @@ export default function LoginForm() {
         />
       </div>
 
+      {/* 에러 메시지 표시 */}
       {error && <p className="text-red-500 text-[18px]">{error}</p>}
+
       <button
         type="submit"
         className="w-[400px] py-[8px] bg-red-600 hover:bg-red-700 duration-200 text-white text-[20px] font-bold rounded-3xl mt-[10px]"

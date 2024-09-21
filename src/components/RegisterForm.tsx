@@ -17,31 +17,43 @@ export default function RegisterForm() {
     e.preventDefault();
     setError("");
 
+    // 비밀번호와 확인 비밀번호가 일치하지 않으면 오류 메시지 표시
     if (password !== confirmPassword) {
-      setError("Password do not match");
+      setError("Passwords do not match");
       return;
     }
 
     const userData = { name, email, password };
 
     try {
-      const res = await axios.post("/api/register", userData);
+      // 서버에 사용자 데이터를 POST로 전송
+      const res = await axios.post(
+        "http://43.203.212.158:8080/api/register",
+        userData,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
 
-      if (res.status === 201) {
+      // 성공적으로 등록된 경우
+      if (res.status === 201 || res.status === 200) {
         console.log("User registered successfully");
-        router.replace("/login");
+        // 필드를 초기화하고 로그인 페이지로 이동
+        setName("");
+        setEmail("");
+        setPassword("");
+        setConfirmPassword("");
+        router.push("/login"); // push 사용
       } else {
+        // 실패한 경우 서버의 오류 메시지 표시
         setError(res.data.message || "Registration failed");
       }
-    } catch (err) {
-      if (axios.isAxiosError(err)) {
-        setError(
-          err.response?.data?.message ||
-            "An unexpected error occurred during registration"
-        );
-      } else {
-        setError("An unexpected error occurred during registration");
-      }
+    } catch (err: any) {
+      // 오류가 발생하면 오류 메시지를 설정
+      console.error("Error during registration:", err);
+      setError(err.response?.data?.message || "Registration error occurred");
     }
   };
 
@@ -53,6 +65,7 @@ export default function RegisterForm() {
       <div>
         <input
           placeholder="Username"
+          value={name}
           onChange={(e) => setName(e.target.value)}
           className="w-[400px] py-2 border rounded-lg pl-[10px] font-bold"
           required
@@ -61,6 +74,7 @@ export default function RegisterForm() {
       <div>
         <input
           placeholder="Email"
+          value={email}
           onChange={(e) => setEmail(e.target.value)}
           className="w-[400px] py-2 border rounded-lg pl-[10px] font-bold"
           type="email"
@@ -70,6 +84,7 @@ export default function RegisterForm() {
       <div>
         <input
           placeholder="Password"
+          value={password}
           onChange={(e) => setPassword(e.target.value)}
           className="w-[400px] py-2 border rounded-lg pl-[10px] font-bold"
           type="password"
@@ -79,6 +94,7 @@ export default function RegisterForm() {
       <div>
         <input
           placeholder="Confirm Password"
+          value={confirmPassword}
           onChange={(e) => setConfirmPassword(e.target.value)}
           className="w-[400px] py-2 border rounded-lg pl-[10px] font-bold"
           type="password"

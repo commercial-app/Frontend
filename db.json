@@ -1,231 +1,248 @@
 {
-    "boards": [
-      {
-        "board_id": 1,
-        "member_position": "1",
-        "tiles": [
-          {
-            "tile_id": 1,
-            "order": 0,
-            "mission": {
-              "mission_id": 1,
-              "title": "Mission Title 1",
-              "content": "This is the content of mission 1.",
-              "image_url": "http://example.com/image1.jpg",
-              "category_name": "Category 1"
-            }
-          },
-          {
-            "tile_id": 2,
-            "order": 1,
-            "mission": {
-              "mission_id": 2,
-              "title": "Mission Title 2",
-              "content": "This is the content of mission 2.",
-              "image_url": "http://example.com/image2.jpg",
-              "category_name": "Category 2"
-            }
-          },
-          {
-            "tile_id": 3,
-            "order": 2,
-            "mission": {
-              "mission_id": 3,
-              "title": "Mission Title 3",
-              "content": "This is the content of mission 3.",
-              "image_url": "http://example.com/image3.jpg",
-              "category_name": "Category 3"
-            }
-          },
-          {
-            "tile_id": 4,
-            "order": 3,
-            "mission": {
-              "mission_id": 4,
-              "title": "Mission Title 4",
-              "content": "This is the content of mission 4.",
-              "image_url": "http://example.com/image4.jpg",
-              "category_name": "Category 4"
-            }
-          },
-          {
-            "tile_id": 5,
-            "order": 4,
-            "mission": {
-              "mission_id": 5,
-              "title": "Mission Title 5",
-              "content": "This is the content of mission 5.",
-              "image_url": "http://example.com/image5.jpg",
-              "category_name": "Category 5"
-            }
-          },
-          {
-            "tile_id": 6,
-            "order": 5,
-            "mission": {
-              "mission_id": 6,
-              "title": "Mission Title 6",
-              "content": "This is the content of mission 6.",
-              "image_url": "http://example.com/image6.jpg",
-              "category_name": "Category 6"
-            }
-          },
-          {
-            "tile_id": 7,
-            "order": 6,
-            "mission": {
-              "mission_id": 7,
-              "title": "Mission Title 7",
-              "content": "This is the content of mission 7.",
-              "image_url": "http://example.com/image7.jpg",
-              "category_name": "Category 7"
-            }
-          },
-          {
-            "tile_id": 8,
-            "order": 7,
-            "mission": {
-              "mission_id": 8,
-              "title": "Mission Title 8",
-              "content": "This is the content of mission 8.",
-              "image_url": "http://example.com/image8.jpg",
-              "category_name": "Category 8"
-            }
-          },
-          {
-            "tile_id": 9,
-            "order": 8,
-            "mission": {
-              "mission_id": 9,
-              "title": "Mission Title 9",
-              "content": "This is the content of mission 9.",
-              "image_url": "http://example.com/image9.jpg",
-              "category_name": "Category 9"
-            }
-          },
-          {
-            "tile_id": 10,
-            "order": 9,
-            "mission": {
-              "mission_id": 10,
-              "title": "Mission Title 10",
-              "content": "This is the content of mission 10.",
-              "image_url": "http://example.com/image10.jpg",
-              "category_name": "Category 10"
-            }
-          },
-          {
-            "tile_id": 11,
-            "order": 10,
-            "mission": {
-              "mission_id": 11,
-              "title": "Mission Title 11",
-              "content": "This is the content of mission 11.",
-              "image_url": "http://example.com/image11.jpg",
-              "category_name": "Category 11"
-            }
-          },
-          {
-            "tile_id": 12,
-            "order": 11,
-            "mission": {
-              "mission_id": 12,
-              "title": "Mission Title 12",
-              "content": "This is the content of mission 12.",
-              "image_url": "http://example.com/image12.jpg",
-              "category_name": "Category 12"
-            }
-          },
-          {
-            "tile_id": 13,
-            "order": 12,
-            "mission": {
-              "mission_id": 13,
-              "title": "Mission Title 13",
-              "content": "This is the content of mission 13.",
-              "image_url": "http://example.com/image13.jpg",
-              "category_name": "Category 13"
-            }
-          },
-          {
-            "tile_id": 14,
-            "order": 13,
-            "mission": {
-              "mission_id": 14,
-              "title": "Mission Title 14",
-              "content": "This is the content of mission 14.",
-              "image_url": "http://example.com/image14.jpg",
-              "category_name": "Category 14"
-            }
-          },
-          {
-            "tile_id": 15,
-            "order": 14,
-            "mission": {
-              "mission_id": 15,
-              "title": "Mission Title 15",
-              "content": "This is the content of mission 15.",
-              "image_url": "http://example.com/image15.jpg",
-              "category_name": "Category 15"
-            }
-          },
-          {
-            "tile_id": 16,
-            "order": 15,
-            "mission": {
-              "mission_id": 16,
-              "title": "Mission Title 16",
-              "content": "This is the content of mission 16.",
-              "image_url": "http://example.com/image16.jpg",
-              "category_name": "Category 16"
-            }
-          },
-          {
-            "tile_id": 17,
-            "order": 16,
-            "mission": {
-              "mission_id": 17,
-              "title": "Mission Title 17",
-              "content": "This is the content of mission 17.",
-              "image_url": "http://example.com/image17.jpg",
-              "category_name": "Category 17"
-            }
-          },
-          {
-            "tile_id": 18,
-            "order": 17,
-            "mission": {
-              "mission_id": 18,
-              "title": "Mission Title 18",
-              "content": "This is the content of mission 18.",
-              "image_url": "http://example.com/image18.jpg",
-              "category_name": "Category 18"
-            }
-          },
-          {
-            "tile_id": 19,
-            "order": 18,
-            "mission": {
-              "mission_id": 19,
-              "title": "Mission Title 19",
-              "content": "This is the content of mission 19.",
-              "image_url": "http://example.com/image19.jpg",
-              "category_name": "Category 19"
-            }
-          },
-          {
-            "tile_id": 20,
-            "order": 19,
-            "mission": {
-              "mission_id": 20,
-              "title": "Mission Title 20",
-              "content": "This is the content of mission 20.",
-              "image_url": "http://example.com/image20.jpg",
-              "category_name": "Category 20"
-            }
+  "register": [
+    {
+      "name": "levi",
+      "email": "levi@gmail.com",
+      "password": "levis"
+    }
+  ],
+  "login": [
+    {
+      "email": "levi@gmail.com",
+      "password": "levis"
+    },
+    {
+      "id": "9d3c",
+      "email": "levi@gmail.com",
+      "password": "levis"
+    }
+  ],
+  "boards": [
+    {
+      "board_id": 1,
+      "member_position": "1",
+      "tiles": [
+        {
+          "tile_id": 1,
+          "order": 0,
+          "mission": {
+            "mission_id": 1,
+            "title": "Mission Title 1",
+            "content": "This is the content of mission 1.",
+            "image_url": "https://cdn.st-news.co.kr/news/photo/202201/4027_10676_2416.jpg",
+            "category_name": "Category 1"
           }
-        ]
-      }
-    ]
-  }
-  
+        },
+        {
+          "tile_id": 2,
+          "order": 1,
+          "mission": {
+            "mission_id": 2,
+            "title": "Mission Title 2",
+            "content": "This is the content of mission 2.",
+            "image_url": "https://cdn.st-news.co.kr/news/photo/202201/4027_10676_2416.jpg",
+            "category_name": "Category 2"
+          }
+        },
+        {
+          "tile_id": 3,
+          "order": 2,
+          "mission": {
+            "mission_id": 3,
+            "title": "Mission Title 3",
+            "content": "This is the content of mission 3.",
+            "image_url": "https://cdn.st-news.co.kr/news/photo/202201/4027_10676_2416.jpg",
+            "category_name": "Category 3"
+          }
+        },
+        {
+          "tile_id": 4,
+          "order": 3,
+          "mission": {
+            "mission_id": 4,
+            "title": "Mission Title 4",
+            "content": "This is the content of mission 4.",
+            "image_url": "https://cdn.st-news.co.kr/news/photo/202201/4027_10676_2416.jpg",
+            "category_name": "Category 4"
+          }
+        },
+        {
+          "tile_id": 5,
+          "order": 4,
+          "mission": {
+            "mission_id": 5,
+            "title": "Mission Title 5",
+            "content": "This is the content of mission 5.",
+            "image_url": "https://cdn.st-news.co.kr/news/photo/202201/4027_10676_2416.jpg",
+            "category_name": "Category 5"
+          }
+        },
+        {
+          "tile_id": 6,
+          "order": 5,
+          "mission": {
+            "mission_id": 6,
+            "title": "Mission Title 6",
+            "content": "This is the content of mission 6.",
+            "image_url": "https://cdn.st-news.co.kr/news/photo/202201/4027_10676_2416.jpg",
+            "category_name": "Category 6"
+          }
+        },
+        {
+          "tile_id": 7,
+          "order": 6,
+          "mission": {
+            "mission_id": 7,
+            "title": "Mission Title 7",
+            "content": "This is the content of mission 7.",
+            "image_url": "https://cdn.st-news.co.kr/news/photo/202201/4027_10676_2416.jpg",
+            "category_name": "Category 7"
+          }
+        },
+        {
+          "tile_id": 8,
+          "order": 7,
+          "mission": {
+            "mission_id": 8,
+            "title": "Mission Title 8",
+            "content": "This is the content of mission 8.",
+            "image_url": "https://cdn.st-news.co.kr/news/photo/202201/4027_10676_2416.jpg",
+            "category_name": "Category 8"
+          }
+        },
+        {
+          "tile_id": 9,
+          "order": 8,
+          "mission": {
+            "mission_id": 9,
+            "title": "Mission Title 9",
+            "content": "This is the content of mission 9.",
+            "image_url": "https://cdn.st-news.co.kr/news/photo/202201/4027_10676_2416.jpg",
+            "category_name": "Category 9"
+          }
+        },
+        {
+          "tile_id": 10,
+          "order": 9,
+          "mission": {
+            "mission_id": 10,
+            "title": "Mission Title 10",
+            "content": "This is the content of mission 10.",
+            "image_url": "https://cdn.st-news.co.kr/news/photo/202201/4027_10676_2416.jpg",
+            "category_name": "Category 10"
+          }
+        },
+        {
+          "tile_id": 11,
+          "order": 10,
+          "mission": {
+            "mission_id": 11,
+            "title": "Mission Title 11",
+            "content": "This is the content of mission 11.",
+            "image_url": "https://cdn.st-news.co.kr/news/photo/202201/4027_10676_2416.jpg",
+            "category_name": "Category 11"
+          }
+        },
+        {
+          "tile_id": 12,
+          "order": 11,
+          "mission": {
+            "mission_id": 12,
+            "title": "Mission Title 12",
+            "content": "This is the content of mission 12.",
+            "image_url": "https://cdn.st-news.co.kr/news/photo/202201/4027_10676_2416.jpg",
+            "category_name": "Category 12"
+          }
+        },
+        {
+          "tile_id": 13,
+          "order": 12,
+          "mission": {
+            "mission_id": 13,
+            "title": "Mission Title 13",
+            "content": "This is the content of mission 13.",
+            "image_url": "https://cdn.st-news.co.kr/news/photo/202201/4027_10676_2416.jpg",
+            "category_name": "Category 13"
+          }
+        },
+        {
+          "tile_id": 14,
+          "order": 13,
+          "mission": {
+            "mission_id": 14,
+            "title": "Mission Title 14",
+            "content": "This is the content of mission 14.",
+            "image_url": "https://cdn.st-news.co.kr/news/photo/202201/4027_10676_2416.jpg",
+            "category_name": "Category 14"
+          }
+        },
+        {
+          "tile_id": 15,
+          "order": 14,
+          "mission": {
+            "mission_id": 15,
+            "title": "Mission Title 15",
+            "content": "This is the content of mission 15.",
+            "image_url": "https://cdn.st-news.co.kr/news/photo/202201/4027_10676_2416.jpg",
+            "category_name": "Category 15"
+          }
+        },
+        {
+          "tile_id": 16,
+          "order": 15,
+          "mission": {
+            "mission_id": 16,
+            "title": "Mission Title 16",
+            "content": "This is the content of mission 16.",
+            "image_url": "https://cdn.st-news.co.kr/news/photo/202201/4027_10676_2416.jpg",
+            "category_name": "Category 16"
+          }
+        },
+        {
+          "tile_id": 17,
+          "order": 16,
+          "mission": {
+            "mission_id": 17,
+            "title": "Mission Title 17",
+            "content": "This is the content of mission 17.",
+            "image_url": "https://cdn.st-news.co.kr/news/photo/202201/4027_10676_2416.jpg",
+            "category_name": "Category 17"
+          }
+        },
+        {
+          "tile_id": 18,
+          "order": 17,
+          "mission": {
+            "mission_id": 18,
+            "title": "Mission Title 18",
+            "content": "This is the content of mission 18.",
+            "image_url": "https://cdn.st-news.co.kr/news/photo/202201/4027_10676_2416.jpg",
+            "category_name": "Category 18"
+          }
+        },
+        {
+          "tile_id": 19,
+          "order": 18,
+          "mission": {
+            "mission_id": 19,
+            "title": "Mission Title 19",
+            "content": "This is the content of mission 19.",
+            "image_url": "https://cdn.st-news.co.kr/news/photo/202201/4027_10676_2416.jpg",
+            "category_name": "Category 19"
+          }
+        },
+        {
+          "tile_id": 20,
+          "order": 19,
+          "mission": {
+            "mission_id": 20,
+            "title": "Mission Title 20",
+            "content": "This is the content of mission 20.",
+            "image_url": "https://cdn.st-news.co.kr/news/photo/202201/4027_10676_2416.jpg",
+            "category_name": "Category 20"
+          }
+        }
+      ]
+    }
+  ]
+}
