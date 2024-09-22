@@ -18,7 +18,7 @@ const Dice: React.FC<DiceProps> = ({ onRoll }) => {
   };
 
   return (
-    <div className="flex flex-col items-center">
+    <div className="flex flex-col items-center hover:scale-110 duration-200">
       <button
         onClick={rollDice}
         disabled={isRolling}

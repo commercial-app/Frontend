@@ -6,6 +6,7 @@ import React, { useEffect, useState } from "react";
 import Tile from "./Tile";
 import Dice from "@/components/dice";
 import { useAuthStore } from "@/app/store/useAuthStore";
+import { FaDice } from "react-icons/fa";
 
 const BOARD_URL = "http://43.203.212.158:8080/api/board";
 const MOVE_URL = (board_id: number) =>
@@ -108,7 +109,7 @@ export default function GameBoard() {
           <div className="flex">
             <div className="bg-red-600 w-[95px] lg:w-[180px] h-[80px] lg:h-[150px] flex flex-col justify-center items-center rounded-l-lg">
               <Image
-                src="/gameBoard/startKNU.jpg"
+                src="/startKNU.webp"
                 width={60}
                 height={60}
                 alt="start"
@@ -149,10 +150,12 @@ export default function GameBoard() {
 
             <div className="bg-red-500 flex-grow flex flex-col items-center justify-center text-white rounded-lg shadow-inner">
               <span className="text-xl font-bold">
-                <h1 className="font-semibold text-center mb-[30px]">
-                  주사위 굴리기!
-                </h1>
-                <h1 className="my-[10px]">{position}</h1>
+                <p className="flex gap-[10px] mb-[30px] items-center">
+                  <h1 className="font-semibold ">
+                    주사위 굴려서 대구상권 탐험을 해봐요!
+                  </h1>
+                  <FaDice size={26} color="blue" />
+                </p>
                 <Dice onRoll={handleRoll} />
                 <div className="flex justify-center mt-[20px]">
                   <h2 className="text-black text-[28px] font-bold mr-[5px] border-b">

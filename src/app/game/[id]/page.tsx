@@ -11,7 +11,7 @@ export default function MissionDetailPage() {
   console.log("테스트:", missionId, title, content, imageUrl, categoryName);
 
   return (
-    <main className="w-full min-h-screen flex flex-col justify-center items-center bg-gradient-to-b from-gray-100 to-gray-300 py-[50px]">
+    <main className="w-full min-h-screen flex flex-col justify-center items-center bg-gradient-to-b py-[50px]">
       <div className="bg-white shadow-lg flex flex-col items-center w-[90%] max-w-[900px] p-[40px] rounded-lg">
         {/* Title Section */}
         <div className="flex flex-col items-center mb-[20px] text-center">

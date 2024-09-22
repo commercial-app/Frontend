@@ -56,8 +56,10 @@ export default function SubmitPage() {
   };
 
   return (
-    <main className="w-full min-h-screen flex flex-col items-center bg-gray-100 py-10">
-      <h1 className="text-[35px] font-bold mb-10">Mission 제출</h1>
+    <main className="w-full min-h-screen flex flex-col items-center py-10">
+      <h1 className="bg-blue-400 w-full max-w-2xl rounded-xl py-[6px] text-center text-[35px] text-white font-semibold mb-[60px] my-[40px]">
+        Mission 제출
+      </h1>
       <form
         onSubmit={handleSubmit}
         className="bg-white shadow-lg rounded-lg p-6 w-full max-w-2xl"
