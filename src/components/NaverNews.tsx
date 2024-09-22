@@ -35,7 +35,7 @@ const NaverNews: React.FC = () => {
         {data.map((item, index) => (
           <div
             key={index}
-            className="bg-white shadow-md rounded-lg p-4 hover:bg-neutral-200 transition-all duration-200"
+            className="bg-white shadow-md rounded-lg p-4 hover:bg-neutral-200 transition-all duration-200 hover:scale-110"
           >
             <h2 className="text-xl font-semibold text-blue-600 hover:underline">
               <a href={item.link} target="_blank" rel="noopener noreferrer">
