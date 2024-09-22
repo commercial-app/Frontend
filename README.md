@@ -1,14 +1,19 @@
+# 프론트엔드 프로젝트 개요 및 기술 스택
+# 프레임워크
 
-# **Frontend**
+## Next.js 
+- 성능과 SEO에 최적화된 React 기반 프레임워크.
 
-## < **Library 및 Framework 정리** >
--  **Next.js - React 기반 Framework**
-- 상태관리 라이브러리 <br/>
-  : Zustand
-- CSS 라이브러리 <br/>
-  : tailwind
-- API <br/>
-  : Naver news
+## 상태 관리:
+- Zustand - 가볍고 유연한 전역 상태 관리 라이브러리.
+
+## 스타일링:
+- Tailwind CSS  <br/>
+최소한의 코드로 빠른 UI 개발을 가능하게 하는 유틸리티 중심의 CSS 프레임워크.
+
+##API 통합:
+- 네이버 뉴스 API  <br/>
+네이버의 실시간 뉴스 데이터를 가져오는 API.
 
   
 <br/>
