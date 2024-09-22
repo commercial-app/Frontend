@@ -42,6 +42,12 @@
 ![image](https://github.com/user-attachments/assets/893da91f-9002-4685-9196-b9b3086726e6)
 
 
+### 주사위 1회 돌린 후..
+
+![image](https://github.com/user-attachments/assets/1d2f5910-d508-4807-a82a-ed11b7a7560d)
+
+
+
 ## <미션 상세 페이지>  <br/> <br/> 
 
 ![image](https://github.com/user-attachments/assets/c2da04c1-ca7e-4fd4-9e6d-96c2eac8384a)
