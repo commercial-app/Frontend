@@ -28,7 +28,8 @@
 ![image](https://github.com/user-attachments/assets/fc3abf98-c90b-410c-a3b9-38973ca01793)
 
 <부루마블 게임 페이지> <br/> <br/> 
-![image](https://github.com/user-attachments/assets/2a5749f5-8089-4c98-babe-fc336d9024cf)
+![image](https://github.com/user-attachments/assets/1ff4cb38-bd53-49ab-816e-6de747b27de2)
+
 
 
 
