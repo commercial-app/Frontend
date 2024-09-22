@@ -7,10 +7,11 @@ import Tile from "./Tile";
 import Dice from "@/components/dice";
 import { useAuthStore } from "@/app/store/useAuthStore";
 import { FaDice } from "react-icons/fa";
+import { useMissionStore } from "@/app/store/useMissionStore";
 
-const BOARD_URL = "https://43.203.212.158:8080/api/board";
+const BOARD_URL = "http://43.203.212.158:8080/api/board";
 const MOVE_URL = (board_id: number) =>
-  `https://43.203.212.158:8080/api/board/${board_id}/move`;
+  `http://43.203.212.158:8080/api/board/${board_id}/move`;
 
 interface TileProps {
   tile_id: number;
@@ -34,6 +35,7 @@ export default function GameBoard() {
   const [loading, setLoading] = useState(false); // 로딩 상태
   const { token } = useAuthStore();
   const [boardId, setBoardId] = useState(0);
+  const { Position, SetPosition } = useMissionStore();
 
   // 보드 데이터를 가져오는 함수
   const fetchBoard = async () => {
@@ -47,6 +49,7 @@ export default function GameBoard() {
       console.log("Board data fetched", res);
       setBoardId(res.data.boardId);
       setPosition(res.data.memberPosition);
+      SetPosition(res.data.memberPosition);
       setTiles(res.data.tiles);
     } catch (err) {
       console.error("GET for Board Info - failed", err);
@@ -83,6 +86,7 @@ export default function GameBoard() {
 
       // 새로운 보드 데이터로 위치와 타일을 업데이트
       setPosition(res.data.memberPosition);
+      SetPosition(res.data.memberPosition);
       setTiles(res.data.tiles);
     } catch (err) {
       if (axios.isAxiosError(err)) {

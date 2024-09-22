@@ -24,7 +24,7 @@ export default function LoginNav() {
           </div>
           <button
             onClick={handleLogout}
-            className="bg-red-500 text-white font-bold hover:bg-red-600 transition duration-300 p-2 rounded-lg"
+            className="w-[90px] bg-red-500 text-white font-bold hover:bg-red-600 transition duration-300 p-[10px] rounded-lg"
           >
             Logout
           </button>
@@ -32,7 +32,7 @@ export default function LoginNav() {
       ) : (
         <Link
           href="/login"
-          className="bg-blue-500 text-white font-bold hover:bg-blue-600 transition duration-300 rounded-lg p-2"
+          className="w-[90px] text-center bg-blue-500 text-white font-bold hover:bg-blue-600 transition duration-300 rounded-lg p-[10px]"
         >
           Login
         </Link>

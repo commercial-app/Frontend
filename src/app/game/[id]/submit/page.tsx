@@ -1,19 +1,26 @@
 "use client";
 
+import { useAuthStore } from "@/app/store/useAuthStore";
 import { useMissionStore } from "@/app/store/useMissionStore";
 import axios from "axios";
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 
 export default function SubmitPage() {
   const [imageFile, setImageFile] = useState<File | null>(null);
+  const [imageUrl, setImageUrl] = useState<string>(""); // 이미지 URL 상태
   const [review, setReview] = useState<string>("");
+  const { token } = useAuthStore();
+  const { missionId, Position, order } = useMissionStore();
 
-  const { order, missionId } = useMissionStore(); // order와 missionId 가져오기
+  const navigate = useRouter();
 
   const handleImageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
     if (file) {
       setImageFile(file);
+      const url = URL.createObjectURL(file);
+      setImageUrl(url); // 미리보기 URL 생성
       console.log("테스트 파일!!", file);
     }
   };
@@ -27,33 +34,48 @@ export default function SubmitPage() {
   const handleSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
-    if (!imageFile) {
+    if (!imageUrl) {
       alert("이미지를 업로드하세요.");
       return;
     }
 
-    const formData = new FormData();
-    formData.append("image", imageFile); // 이미지 파일 추가
-    formData.append("review", review); // 리뷰 추가
+    // JSON 형태로 데이터 전송
+    const data = {
+      image_url: imageUrl, // 이미지 URL
+      content: review, // 리뷰 내용
+    };
 
     try {
       const res = await axios.post(
-        `/api/board/${order}/mission/${missionId}`,
-        formData
-      ); // 수정된 API 경로
+        `http://43.203.212.158:8080/api/board/${missionId}`,
+        data, // JSON 데이터
+        {
+          headers: {
+            Authorization: `Bearer ${token}`, // Bearer 토큰 추가
+            "Content-Type": "application/json", // JSON 형식 명시
+          },
+        }
+      );
 
       if (res.status === 200 || res.status === 201) {
-        console.log("파일이 성공적으로 업로드되었습니다.");
+        console.log("데이터가 성공적으로 전송되었습니다.");
       } else {
-        console.error("파일 업로드 실패:", res.statusText);
+        console.error("데이터 전송 실패:", res.statusText);
       }
     } catch (error) {
       console.error("에러 발생:", error);
     }
 
     setImageFile(null);
+    setImageUrl("");
     setReview("");
   };
+
+  if (Position !== order) {
+    alert("아직 깰 수 없는 미션입니다");
+    navigate.back();
+    return;
+  }
 
   return (
     <main className="w-full min-h-screen flex flex-col items-center py-10">
@@ -75,10 +97,10 @@ export default function SubmitPage() {
           />
           {imageFile && (
             <img
-              src={URL.createObjectURL(imageFile)}
+              src={imageUrl}
               alt="미리보기"
               className="mt-4 w-full h-auto rounded-lg"
-              onLoad={() => URL.revokeObjectURL(URL.createObjectURL(imageFile))} // URL 해제
+              onLoad={() => URL.revokeObjectURL(imageUrl)} // URL 해제
             />
           )}
         </div>
