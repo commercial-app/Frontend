@@ -33,7 +33,7 @@ export default function Tile({ tile, isActive }: TileProps) {
     setRejection,
   } = useMissionStore();
 
-  useEffect(() => {
+  const onhandleChange = () => {
     console.log("타일 업데이트", tile);
     setOrder(tile.order);
     setId(tile.mission.missionId);
@@ -43,12 +43,11 @@ export default function Tile({ tile, isActive }: TileProps) {
     setCategoryName(tile.mission.categoryName);
     setMissionSummitState(tile.mission.missionSummitState);
     setRejection(tile.mission.rejection);
-  }, [tile]);
-
-  console.log("타일", tile);
+  };
 
   return (
     <Link
+      onClick={onhandleChange}
       href={`/game/${tile.mission.missionId}`}
       className="border flex-1 flex flex-col justify-center items-center hover:bg-neutral-300 duration-200 relative"
     >
