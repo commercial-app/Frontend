@@ -39,12 +39,19 @@
 
 
 ## <부루마블 게임 페이지> <br/> <br/> 
-![image](https://github.com/user-attachments/assets/1ff4cb38-bd53-49ab-816e-6de747b27de2)
+![image](https://github.com/user-attachments/assets/893da91f-9002-4685-9196-b9b3086726e6)
+
 
 ## <미션 상세 페이지>  <br/> <br/> 
 
+![image](https://github.com/user-attachments/assets/c2da04c1-ca7e-4fd4-9e6d-96c2eac8384a)
+
+
 
 ## <미션 제출 페이지> <br/> <br/> 
+
+![image](https://github.com/user-attachments/assets/b81ceb0b-ca4e-4e3c-a1f5-732c14156a31)
+
 
 
 
