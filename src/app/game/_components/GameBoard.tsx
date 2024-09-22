@@ -150,12 +150,12 @@ export default function GameBoard() {
 
             <div className="bg-red-500 flex-grow flex flex-col items-center justify-center text-white rounded-lg shadow-inner">
               <span className="text-xl font-bold">
-                <p className="flex gap-[10px] mb-[30px] items-center">
+                <div className="flex gap-[10px] mb-[30px] items-center">
                   <h1 className="font-semibold ">
                     주사위 굴려서 대구상권 탐험을 해봐요!
                   </h1>
                   <FaDice size={26} color="blue" />
-                </p>
+                </div>
                 <Dice onRoll={handleRoll} />
                 <div className="flex justify-center mt-[20px]">
                   <h2 className="text-black text-[28px] font-bold mr-[5px] border-b">
