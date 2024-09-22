@@ -18,14 +18,25 @@
 <br/>
 
 ## <회원가입 페이지> <br/> <br/>
-![image](https://github.com/user-attachments/assets/acf17f6c-62dd-4da9-8bcb-5bb7aa498e97)
+![image](https://github.com/user-attachments/assets/4b7b522e-40c3-4624-b665-b65d45eaaf84)
+
 
 
 ## <로그인 페이지> <br/> <br/>
-![image](https://github.com/user-attachments/assets/fcba3d61-5cdf-4b42-a456-f26784531c09)
+![image](https://github.com/user-attachments/assets/3c4884fc-89fe-4372-be56-fa2e20aee1c9)
+
 
 ## <소개 페이지> <br/> <br/>
-![image](https://github.com/user-attachments/assets/fc3abf98-c90b-410c-a3b9-38973ca01793)
+![image](https://github.com/user-attachments/assets/85a0ecc1-ace1-4e63-a684-5e923251698d)
+
+
+## <메인 페이지> <br/> <br/>  - 게임 접속 버튼 + 네이버 뉴스  
+![image](https://github.com/user-attachments/assets/2728c4b8-1598-4daf-a1d3-c7550300d812)
+
+![image](https://github.com/user-attachments/assets/592c4468-c972-4cee-b7df-12ef3f74e42a)
+
+
+
 
 ## <부루마블 게임 페이지> <br/> <br/> 
 ![image](https://github.com/user-attachments/assets/1ff4cb38-bd53-49ab-816e-6de747b27de2)
