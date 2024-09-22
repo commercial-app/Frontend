@@ -5,12 +5,12 @@ import Link from "next/link";
 export default function Home() {
   return (
     <main className="w-full min-h-screen flex flex-col items-center p-6">
-      <section className="bg-blue-700 bg-opacity-80 p-[30px] rounded-xl flex flex-col items-center text-center mb-[80px] mt-[90px]">
+      <section className="bg-blue-700 bg-opacity-80 p-[30px] rounded-xl flex flex-col items-center text-center mb-[80px] mt-[90px] hover:scale-110">
         <h1 className=" p-4 text-3xl font-bold text-white mb-4 rounded-lg">
           대구 상권 부루마블 게임하러 가기!
         </h1>
         <Link href="/game">
-          <span className="text-[40px] bg-red-500 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-red-600 transition duration-200">
+          <span className="font-semibold text-[40px] bg-red-500 text-white px-4 py-2 rounded-lg shadow-lg hover:bg-red-600 transition duration-200">
             START
           </span>
         </Link>
