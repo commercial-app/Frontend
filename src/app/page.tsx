@@ -23,7 +23,7 @@ export default function Home() {
           <MatchSchedule />
         </div>*/}
         <div className="flex flex-col items-center">
-          <h1 className="mt-[30px] text-white text-3xl font-bold mb-6">
+          <h1 className="mt-[30px] text-white text-3xl font-bold mb-6 text-center">
             대구 상권 뉴스
           </h1>
           <NaverNews />
