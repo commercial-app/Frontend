@@ -1,19 +1,28 @@
 
-<Frontend>
-상태관리 라이브러리: Zustand
-CSS 라이브러리: tailwind
-API: Naver news
+**Frontend**
+-  **Next.js - React 기반 Framework**
+- 상태관리 라이브러리: Zustand
+- CSS 라이브러리: tailwind
+- API: Naver news
 
-
+  
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 
 <회원가입 페이지>
+<br/>
 ![image](https://github.com/user-attachments/assets/acf17f6c-62dd-4da9-8bcb-5bb7aa498e97)
 
 
 <로그인 페이지>
+<br/>
 ![image](https://github.com/user-attachments/assets/fcba3d61-5cdf-4b42-a456-f26784531c09)
 
 <소개 페이지>
+<br/>
 ![image](https://github.com/user-attachments/assets/fc3abf98-c90b-410c-a3b9-38973ca01793)
 
 
