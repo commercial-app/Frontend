@@ -8,9 +8,9 @@ import Dice from "@/components/dice";
 import { useAuthStore } from "@/app/store/useAuthStore";
 import { FaDice } from "react-icons/fa";
 
-const BOARD_URL = "http://43.203.212.158:8080/api/board";
+const BOARD_URL = "https://43.203.212.158:8080/api/board";
 const MOVE_URL = (board_id: number) =>
-  `http://43.203.212.158:8080/api/board/${board_id}/move`;
+  `https://43.203.212.158:8080/api/board/${board_id}/move`;
 
 interface TileProps {
   tile_id: number;
