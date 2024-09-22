@@ -1,9 +1,14 @@
 
-**Frontend**
+# **Frontend**
+
+## < **Library 및 Framework 정리** >
 -  **Next.js - React 기반 Framework**
-- 상태관리 라이브러리: Zustand
-- CSS 라이브러리: tailwind
-- API: Naver news
+- 상태관리 라이브러리 <br/>
+  : Zustand
+- CSS 라이브러리 <br/>
+  : tailwind
+- API <br/>
+  : Naver news
 
   
 <br/>
