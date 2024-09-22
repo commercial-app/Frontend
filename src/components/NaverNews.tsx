@@ -22,7 +22,6 @@ const NaverNews: React.FC = () => {
         query: "대구",
       },
     });
-    console.log(response.data);
     setData(response.data.items);
   };
 

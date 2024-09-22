@@ -1,3 +1,4 @@
+import MatchSchedule from "@/components/MatchSchedule";
 import NaverNews from "@/components/NaverNews";
 import Link from "next/link";
 
@@ -14,11 +15,19 @@ export default function Home() {
           </span>
         </Link>
       </section>
-      <section className="bg-neutral-700 bg-opacity-80 rounded-xl w-full max-w-3xl flex flex-col items-center">
-        <h1 className="mt-[30px] text-white text-3xl font-bold mb-6">
-          대구 상권 뉴스
-        </h1>
-        <NaverNews />
+      <section className="w-full bg-neutral-700 bg-opacity-80 rounded-xl max-w-3xl flex gap-[40px] items-center">
+        {/* <div className="w-full">
+          <h1 className="mt-[30px] text-white text-3xl font-bold mb-6">
+            대구FC 경기 일정 요청
+          </h1>
+          <MatchSchedule />
+        </div>*/}
+        <div className="flex flex-col items-center">
+          <h1 className="mt-[30px] text-white text-3xl font-bold mb-6">
+            대구 상권 뉴스
+          </h1>
+          <NaverNews />
+        </div>
       </section>
     </main>
   );
