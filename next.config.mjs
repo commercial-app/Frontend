@@ -2,6 +2,7 @@
 // next.config.mjs
 const nextConfig = {
   images: {
+    domains: ["localhost"],
     remotePatterns: [
       {
         protocol: "http",

@@ -11,16 +11,21 @@ export default function LoginForm() {
   const [error, setError] = useState("");
   const router = useRouter();
 
-  const { setName, setPoint, setToken } = useAuthStore();
+  const {
+    setName,
+    setPoint,
+    setToken,
+    setEmail: setEmailStore,
+  } = useAuthStore();
 
   const login = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    setError(""); // 오류 상태 초기화
+    setError("");
 
     const userData = { email, password };
 
     try {
-      const res = await axios.post(
+      const loginRes = await axios.post(
         "http://43.203.212.158:8080/api/login",
         userData,
         {
@@ -30,23 +35,37 @@ export default function LoginForm() {
         }
       );
 
-      if (res.status === 200) {
-        const { token } = res.data;
-
+      if (loginRes.status === 200) {
+        const { token } = loginRes.data;
         setToken(token);
+        sessionStorage.setItem("token", token);
 
-        // sessionStorage에 토큰 저장
+        // 사용자 정보 요청
         try {
-          sessionStorage.setItem("token", token);
-        } catch (storageError) {
-          console.error("Failed to save token to sessionStorage", storageError);
-          setError("Failed to save session. Please try again.");
-          return;
-        }
+          const userInfoRes = await axios.get(
+            "http://43.203.212.158:8080/api/member",
+            {
+              headers: {
+                Authorization: `Bearer ${token}`,
+              },
+            }
+          );
 
-        router.replace("/"); // 로그인 성공 후 홈으로 리다이렉션
+          if (userInfoRes.status === 200) {
+            const { email, name, point } = userInfoRes.data;
+            setEmailStore(email);
+            setName(name);
+            setPoint(point);
+            router.replace("/");
+          } else {
+            setError("Failed to fetch user information");
+          }
+        } catch (userInfoErr) {
+          console.error("User info fetch error:", userInfoErr);
+          setError("Failed to fetch user information");
+        }
       } else {
-        setError(res.data.message || "Login failed");
+        setError(loginRes.data.message || "Login failed");
       }
     } catch (err: any) {
       console.error("Login error:", err);
@@ -78,7 +97,6 @@ export default function LoginForm() {
         />
       </div>
 
-      {/* 에러 메시지 표시 */}
       {error && <p className="text-red-500 text-[18px]">{error}</p>}
 
       <button

@@ -2,31 +2,44 @@ import { create } from "zustand";
 import { persist } from "zustand/middleware";
 
 interface missionProps {
-  id: number;
+  order: number;
+  missionId: number;
   title: string;
   content: string;
-  image: string;
-  category: string;
-  setId: (id: number) => void;
+  imageUrl: string;
+  categoryName: string;
+  missionSummitState: boolean;
+  rejection: boolean;
+  setOrder: (order: number) => void;
+  setId: (missionId: number) => void;
   setTitle: (title: string) => void;
   setContent: (content: string) => void;
-  setImage: (image: string) => void;
-  setCategory: (category: string) => void;
+  setImage: (imageUrl: string) => void;
+  setCategoryName: (categoryName: string) => void;
+  setMissionSummitState: (missionSummitState: boolean) => void;
+  setRejection: (rejection: boolean) => void;
 }
 
 export const useMissionStore = create<missionProps>()(
   persist(
     (set) => ({
-      id: 0,
+      order: 0,
+      missionId: 0,
       title: "",
       content: "",
-      image: "",
-      category: "",
-      setId: (id: number) => set({ id }),
+      imageUrl: "",
+      categoryName: "",
+      missionSummitState: false,
+      rejection: false,
+      setOrder: (order: number) => set({ order }),
+      setId: (missionId: number) => set({ missionId }),
       setTitle: (title: string) => set({ title }),
       setContent: (content: string) => set({ content }),
-      setImage: (image: string) => set({ image }),
-      setCategory: (category: string) => set({ category }),
+      setImage: (imageUrl: string) => set({ imageUrl }),
+      setCategoryName: (categoryName: string) => set({ categoryName }),
+      setMissionSummitState: (state: boolean) =>
+        set({ missionSummitState: state }),
+      setRejection: (state: boolean) => set({ rejection: state }),
     }),
     {
       name: "mission-store", // Local storage key

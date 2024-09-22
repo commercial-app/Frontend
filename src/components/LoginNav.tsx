@@ -2,13 +2,16 @@
 
 import { useAuthStore } from "@/app/store/useAuthStore";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function LoginNav() {
   const { token, name, point, resetUser, clearToken } = useAuthStore();
+  const navigate = useRouter();
 
   const handleLogout = () => {
     clearToken();
     resetUser();
+    navigate.push("");
   };
 
   return (

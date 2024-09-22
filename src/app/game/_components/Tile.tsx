@@ -9,31 +9,47 @@ interface TileProps {
     order: number;
     state: boolean;
     mission: {
-      mission_id: number;
+      missionId: number;
       title: string;
       content: string;
-      image_url: string;
-      category_name: string;
+      imageUrl: string;
+      categoryName: string;
+      missionSummitState: boolean;
+      rejection: boolean;
     };
   };
-  isActive: boolean; // 추가
+  isActive: boolean;
 }
 
 export default function Tile({ tile, isActive }: TileProps) {
-  const { setId, setTitle, setContent, setImage, setCategory } =
-    useMissionStore();
+  const {
+    setOrder,
+    setId,
+    setTitle,
+    setContent,
+    setImage,
+    setCategoryName,
+    setMissionSummitState,
+    setRejection,
+  } = useMissionStore();
 
   useEffect(() => {
-    setId(tile.mission.mission_id);
+    console.log("타일 업데이트", tile);
+    setOrder(tile.order);
+    setId(tile.mission.missionId);
     setTitle(tile.mission.title);
     setContent(tile.mission.content);
-    setImage(tile.mission.image_url);
-    setCategory(tile.mission.category_name);
-  }, [tile, setTitle, setContent, setImage, setCategory]);
+    setImage(tile.mission.imageUrl);
+    setCategoryName(tile.mission.categoryName);
+    setMissionSummitState(tile.mission.missionSummitState);
+    setRejection(tile.mission.rejection);
+  }, [tile]);
+
+  console.log("타일", tile);
 
   return (
     <Link
-      href={`/game/${tile.mission.mission_id}`}
+      href={`/game/${tile.mission.missionId}`}
       className="border flex-1 flex flex-col justify-center items-center hover:bg-neutral-300 duration-200 relative"
     >
       {isActive && (

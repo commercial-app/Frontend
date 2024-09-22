@@ -1,3 +1,4 @@
+import React from "react";
 import GameBoard from "./_components/GameBoard";
 
 export default function GamePage() {

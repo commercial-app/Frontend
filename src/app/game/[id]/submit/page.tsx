@@ -8,7 +8,7 @@ export default function SubmitPage() {
   const [imageFile, setImageFile] = useState<File | null>(null);
   const [review, setReview] = useState<string>("");
 
-  const { id } = useMissionStore();
+  const { order, missionId } = useMissionStore(); // order와 missionId 가져오기
 
   const handleImageChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const file = event.target.files?.[0];
@@ -37,7 +37,10 @@ export default function SubmitPage() {
     formData.append("review", review); // 리뷰 추가
 
     try {
-      const res = await axios.post(`/api/submit/${id}`, formData);
+      const res = await axios.post(
+        `/api/board/${order}/mission/${missionId}`,
+        formData
+      ); // 수정된 API 경로
 
       if (res.status === 200 || res.status === 201) {
         console.log("파일이 성공적으로 업로드되었습니다.");
